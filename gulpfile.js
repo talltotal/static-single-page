@@ -17,7 +17,9 @@ const Script = 'src/*.js'
 const Html = 'src/*.html'
 
 gulp.task('clean', gulp.series(function () {
-  return gulp.src(Dist)
+  return gulp.src(Dist, {
+    allowEmpty: true,
+  })
     .pipe(clean())
 }))
 
@@ -54,7 +56,7 @@ gulp.task('script', gulp.series(function () {
 }))
 
 gulp.task('html', gulp.series(function () {
-  gulp.src(Html)
+  return gulp.src(Html)
     .pipe(htmlmin({
       collapseWhitespace: true,
       conservativeCollapse: true,
