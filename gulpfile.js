@@ -98,10 +98,12 @@ gulp.task('temp', gulp.series(function () {
           <meta http-equiv="X-UA-Compatible" content="IE=edge">
           <meta name="viewport" content="width=device-width, initial-scale=1">
           <link rel="stylesheet" href="./index.css">
-        </head>`,
-      footer: `    <script type="text/javascript" src="./index.js"></script>
-      </body>
-    </html>`,
+        </head>
+        <body>`,
+      footer: `
+          <script type="text/javascript" src="./index.js"></script>
+        </body>
+      </html>`,
     }))
     .pipe(htmlmin({
       collapseWhitespace: true,
