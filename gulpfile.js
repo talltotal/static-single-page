@@ -76,16 +76,16 @@ gulp.task('temp', gulp.series(function () {
   return gulp.src(Temp)
     .pipe(through.obj(function (file, enc, cb) {
       if (file.isNull()) {
-        cb(null, file)
-        return
+        return cb(null, file)
+      }
+      if (file.isStream()) {
+        console.error('Streaming not supported')
+        return cb(null, file)
       }
       if (file.isBuffer()) {
         const template = Handlebars.compile(file.contents.toString())
         file.contents = Buffer.from(template(tempData))
         file.path = file.path.replace(/\.hbs$/, '.html')
-      }
-      if (file.isStream()) {
-        console.log('1')
       }
 
       cb(null, file)

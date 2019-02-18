@@ -7,6 +7,7 @@
     "stylelint:fix": "stylelint src/*.scss --fix",
     "eslint:fix": "eslint src/*.js,*.js --fix"
   },
+  "keywords": ["static page", "gulp", "handlebars"],
   "author": "talltotal",
   "license": "ISC",
   "devDependencies": {
