@@ -17,7 +17,7 @@ const wrap = require('gulp-wrapper')
 const tempData = require('./src/data.js')
 
 const Dist = 'dist'
-const Img = 'src/*.png'
+const Img = 'src/*.jpeg'
 const Style = 'src/index.scss'
 const Script = 'src/index.js'
 const Html = 'src/*.html'

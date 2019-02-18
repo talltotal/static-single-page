@@ -35,25 +35,25 @@ module.exports = {
   ],
   banner: [
     {
-      bg: './bg.png',
+      bg: './bg.jpeg',
       icon: 'logo',
       title: 'We Build Objects<br/>And Spaces',
       desc: 'Support bright students today for<br/>a better tomorrow',
     },
     {
-      bg: './bg.png',
+      bg: './bg.jpeg',
       icon: 'logo',
       title: 'We Build Objects<br/>And Spaces',
       desc: 'Support bright students today for<br/>a better tomorrow',
     },
     {
-      bg: './bg.png',
+      bg: './bg.jpeg',
       icon: 'logo',
       title: 'We Build Objects<br/>And Spaces',
       desc: 'Support bright students today for<br/>a better tomorrow',
     },
     {
-      bg: './bg.png',
+      bg: './bg.jpeg',
       icon: 'logo',
       title: 'We Build Objects<br/>And Spaces',
       desc: 'Support bright students today for<br/>a better tomorrow',
