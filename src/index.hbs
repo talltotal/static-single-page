@@ -1,0 +1,72 @@
+
+<header>
+  <nav class="navbar content">
+    <div class="navbar-lang">
+      <ul>
+        <li><a href="#">RU</a></li>
+        <li class="navbar-lang-active"><a href="#">EN</a></li>
+      </ul>
+    </div>
+    <div class="navbar-nav">
+      <ul>
+        {{#each nav}}
+          <li><a href="{{link}}">{{name}}</a></li>
+        {{/each}}
+      </ul>
+    </div>
+    <div class="navbar-social">
+      <ul>
+        {{#each social}}
+          <li><a href="{{link}}">
+            {{> svgIcon name=icon}}
+          </a></li>
+        {{/each}}
+      </ul>
+    </div>
+  </nav>
+</header>
+<div class="banner" id="swiper">
+  <button type="button" class="banner-btn banner-btn-left">
+    {{> svgIcon name="left"}}
+  </button>
+  <button type="button" class="banner-btn banner-btn-right">
+    {{> svgIcon name="right"}}
+  </button>
+  {{#each banner}}
+    <div class="banner-item{{#if @first}} is-active{{/if}}" style="background-image: url('{{bg}}')">
+      <div class="banner-content">
+        {{> svgIcon name=icon}}
+        <h2 class="banner-title">{{{title}}}</h2>
+        <p class="banner-desc">{{{desc}}}</p>
+      </div>
+    </div>
+  {{/each}}
+</div>
+<div class="search">
+  <div class="content search-box">
+    <input class="input" type="text" value="E-mail"/>
+    <div class="select">
+      <input class="input" readonly value="Investment" />
+      {{> svgIcon name="down"}}
+    </div>
+    <button class="button" type="button">let's start</button>
+  </div>
+</div>
+<div class="features">
+  <div class="content">
+    <div class="feature feature-main">
+      {{> svgIcon name=fMain.icon}}
+      <h2 class="feature-title">{{fMain.title}}</h2>
+      <p class="feature-desc">{{fMain.desc}}</p>
+    </div>
+    <div class="feature-list">
+      {{#each feature}}
+        <div class="feature">
+          {{> svgIcon name=icon}}
+          <h2 class="feature-title">{{{title}}}</h2>
+          <p class="feature-desc">{{{desc}}}</p>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</div>

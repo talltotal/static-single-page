@@ -1,13 +1,13 @@
 {
   "name": "site",
   "version": "0.0.1",
-  "description": "",
+  "description": "static single page",
   "scripts": {
     "build": "gulp",
     "stylelint:fix": "stylelint src/*.scss --fix",
     "eslint:fix": "eslint src/*.js,*.js --fix"
   },
-  "author": "",
+  "author": "talltotal",
   "license": "ISC",
   "devDependencies": {
     "@babel/preset-env": "^7.3.1",
@@ -27,8 +27,11 @@
     "gulp-sass": "^4.0.2",
     "gulp-stylelint": "^8.0.0",
     "gulp-uglify": "^3.0.1",
+    "gulp-wrapper": "^1.0.0",
+    "handlebars": "^4.1.0",
     "stylelint": "^9.10.1",
     "stylelint-order": "^2.0.0",
-    "stylelint-scss": "^3.5.3"
+    "stylelint-scss": "^3.5.3",
+    "through2": "^3.0.0"
   }
 }
