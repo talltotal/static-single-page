@@ -1,7 +1,20 @@
 #!/bin/sh
 
-remote="$1"
+check_branch="master"
 
-echo >&2 "$remote"
+while read local_ref local_sha remote_ref remote_sha
+do
+	current_branch=$(git rev-parse --abbrev-ref HEAD)
 
-exit 1
+  if [ "$current_branch" = "$check_branch" ]
+  then
+    # 执行build
+    npm run build || {
+      echo
+      echo "pre-push hook > build failed"
+      exit 1
+    }
+  fi
+done
+
+exit 0
