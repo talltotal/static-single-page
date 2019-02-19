@@ -3,11 +3,16 @@
   "version": "0.0.1",
   "description": "static single page",
   "scripts": {
+    "install": "node hooks.js",
     "build": "gulp",
     "stylelint:fix": "stylelint src/*.scss --fix",
     "eslint:fix": "eslint src/*.js,*.js --fix"
   },
-  "keywords": ["static page", "gulp", "handlebars"],
+  "keywords": [
+    "static page",
+    "gulp",
+    "handlebars"
+  ],
   "author": "talltotal",
   "license": "ISC",
   "devDependencies": {
